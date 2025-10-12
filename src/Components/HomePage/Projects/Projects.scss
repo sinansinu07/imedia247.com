@@ -1,0 +1,128 @@
+@import "../../../index.scss";
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .project-container {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        z-index: 2;
+        justify-content: center;
+        width: 100%;
+    
+        .project-card {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: .5s;
+            display: flex;
+            flex-direction: column;
+
+            .project-img-div {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+
+                .project-img {
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s;
+                    object-fit: cover;
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    pointer-events: none;
+                    z-index: 1;
+                }
+
+                .si-no {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 2;
+                    font-weight: 600;
+                }
+            }
+
+            .project-img-div:hover .project-img {
+                transform: scale(1.1);
+                transition: .5s;
+            }
+
+            .project-img-div:hover .overlay {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            .project-info {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+    
+                .project-name {
+                    font-size: 25px;
+                    font-weight: 800;
+                }
+    
+                .same-line {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+    
+                .project-location {
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+    
+                .read-more {
+                    // margin-top: 10px;
+                    // margin-right: 10px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border-bottom: 2px solid $primary;
+                    cursor: pointer;
+                    width: auto;
+                    transition: transform 0.3s ease;
+                }
+                
+                .read-more svg {
+                    font-size: 20px;
+                    transition: transform 0.3s ease;
+                }
+                
+                .read-more:hover {
+                    color: $primary;
+                }
+                
+                .read-more:hover svg {
+                    // transform: translateX(5px) scale(1.2);
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

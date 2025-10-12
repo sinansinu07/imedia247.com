@@ -1,0 +1,59 @@
+@import '../../../index.scss';
+
+.process-container {
+    background: linear-gradient(135deg, $secondary 0%, $primary 100%);
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    .head-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        p {
+            width: 50%;
+        }
+    }
+
+    .process-content-div {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .process-hr {
+        height: 2px;
+        background: $primary;
+        border: none;
+    }
+
+    .process-content {
+        margin-top: -10px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .process {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background: $primary;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .title {
+                margin-top: 20px;
+                color: $black;
+            }
+        }
+    }
+}

@@ -1,0 +1,193 @@
+// Import color variables from the main index.scss
+@import '../../../index.scss';
+
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    // background: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 100px;
+    padding-left: 100px;
+    transition: .5s;
+
+    .logo-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 10001;
+        overflow: hidden;
+        width: 100px;
+        height: 70px;
+
+        .menu-icon-close {
+            display: none;
+        }
+
+        .close-menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .nav-links-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .mobile-menu-header {
+            display: none;
+        }
+
+        .mobile-menu-footer {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            // padding: 0px 30px;
+
+            li {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                letter-spacing: 1px;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                svg {
+                    font-size: 14px;
+                    color: $secondary;
+                    transition: .5s;
+                }
+            }
+
+            a {
+                color: $white;
+            }
+
+            li:hover svg {
+                color: $primary;
+                transform: rotate(180deg);
+                transition: .5s;
+            }
+
+            a:hover {
+                color: $primary;
+                transition: .5s;
+            }
+
+            a.active {
+                color: $primary;
+                transition: .5s;
+            }
+
+            .dropdown {
+                position: absolute;
+                top: 40px;
+                left: -50px;
+                z-index: 1000;
+                // padding: 20px;
+                background: $white;
+                color: $black;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    text-align: left;
+                    align-items: flex-start;
+                    gap: 10px;
+                    padding: 10px 30px;
+                    
+                    li a {
+                        color: $black;
+                        transition: .5s;
+                    }
+
+                    li a:hover {
+                        color: $primary;
+                        transition: .5s;
+                    }
+                }
+            }
+
+            .dropdown.destination {
+                left: -30px;
+            }
+
+            .dropdown.services {
+                width: 350px;
+            }
+
+            .dropdown.products {
+                width: 350px;
+            }
+        }
+
+        .menu-hr {
+            height: 20px;
+            width: 2px;
+        }
+
+        .login-icon {
+            font-size: 25px;
+            cursor: pointer;
+            transition: .3s;
+            color: $white;
+        }
+
+        .login-icon:hover {
+            color: $primary;
+            transition: .3s;
+        }
+    }
+}
+
+.navbar.sticky {
+    background: $white;
+    color: $black;
+    top: 0;
+    transition: 1s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .nav-links-div ul li, .nav-links-div ul li a, .nav-links-div .login-icon {
+        color: $black;
+        transition: .5s;
+    }
+
+    .nav-links-div ul li:hover, .nav-links-div ul li a:hover, .nav-links-div .login-icon:hover {
+        color: $primary;
+        transition: .5s;
+    }
+
+    .nav-links-div .btn {
+        border: 2px solid $primary;
+        transition: .5s;
+    }
+}

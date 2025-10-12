@@ -1,0 +1,119 @@
+@import '../../../index.scss';
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .contact-info {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .head-div {
+            p {
+                max-width: 600px;
+            }
+        }
+
+        .contact-form {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+    
+            .sameline {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+            }
+          
+            .form-field {
+                width: 100%;
+                .MuiOutlinedInput-root.Mui-focused fieldset {
+                    border-color: $primary;
+                }
+            
+                label.Mui-focused {
+                    color: $primary;
+                }
+
+                .btn {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .contact-form-div {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 30px;
+
+        .head {
+            font-size: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .head {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: gray;
+                }
+
+                .content a {
+                    color: $black;
+                }
+
+                .content a:hover {
+                    color: $primary;
+                }
+
+                .content p {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: black;
+                font-size: 25px;
+                color: white;
+                transition: .3s;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+
+            a:hover {
+                background: $primary;
+                transition: .3s;
+            }
+        }
+    }  
+}

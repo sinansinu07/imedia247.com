@@ -1,0 +1,107 @@
+@import '../../../index.scss';
+
+.Testimonials-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    .head-div {
+        width: 50%;
+        // justify-content: flex-end;
+        // text-align: right;
+
+        .btn {
+            width: 150px;
+            margin-top: 30px;
+            // margin-right: auto;
+        }
+    }
+
+    .Testimonials-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+        .splide__track {
+            padding-bottom: 50px;
+            width: 600px;
+        }
+          
+        .splide__slide {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // background-color: #f5f5f5;
+            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            /* background: gray; */
+            padding: 50px;
+            // border-radius: 1rem;
+            gap: 1rem;
+            border: 2px solid $primary;
+        }
+
+        .details {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .title-div {
+                display: flex;
+                flex-direction: column;
+
+                .name {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: $primary;
+                }
+
+                .position {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $primary;
+                }
+            }
+        }
+         
+        .splide__pagination__page.is-active {
+            background-color: $primary;
+        }
+          
+        .splide__arrow {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            /* color: #505050; */
+            font-weight: 300;
+            display: none;
+        }
+          
+        .splide__arrow--prev {
+            top: 50%;
+            left: -3.5rem;
+        }
+          
+        .splide__arrow--next {
+            top: 50%;
+            right: -3.5rem;
+        }
+          
+        .splide__pagination__page {
+            height: 10px;
+            width: 10px;
+            opacity: 1;
+        }
+    }
+}
