@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import { IoIosArrowDown } from "react-icons/io";
 import { BiLogIn } from "react-icons/bi";
-import { services } from '../../../DataSets/services'
+import { services } from '../../../Datasets/services'
 import { FlipLinkBtn } from '../../../Designs/FlipLink'
 
 export default function Navbar(){

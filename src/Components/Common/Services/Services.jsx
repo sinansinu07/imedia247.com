@@ -1,4 +1,4 @@
-import { services } from "../../../DataSets/services";
+import { services } from "../../../Datasets/services";
 import "./Services.scss"
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
