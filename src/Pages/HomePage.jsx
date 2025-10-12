@@ -1,14 +1,13 @@
 import { Fragment } from "react";
 // import Helmet from "../Components/Common/Helmet/Helmet"
 import HomeHero from "../Components/HomePage/HomeHero/HomeHero";
-import Products from "../Components/Common/Products/Products";
 import Projects from "../Components/HomePage/Projects/Projects";
 import AboutCompany from "../Components/HomePage/AboutCompany/AboutCompany";
 import WhyChooseUs from "../Components/HomePage/WhyChooseUs/WhyChooseUs";
-import HomeGallery from "../Components/HomePage/HomeGallery/HomeGallery";
+// import HomeGallery from "../Components/HomePage/HomeGallery/HomeGallery";
 import Process from "../Components/Common/Process/Process";
 import Testimonials from "../Components/HomePage/Testimonials/Testimonials";
-import ContactUs from "../Components/HomePage/ContactUs/ContactUs";
+// import ContactUs from "../Components/HomePage/ContactUs/ContactUs";
 import Services from "../Components/Common/Services/Services";
 import ContactForm from "../Components/Common/ContactForm/ContactForm";
 import Clients from "../Components/Common/Clients/Clients";
@@ -20,7 +19,6 @@ export default function HomePage() {
                 <HomeHero/>
                 <AboutCompany/>
                 <Services/>
-                {/* <Products/> */}
                 <Projects/>
                 <WhyChooseUs/>
                 <Testimonials/>
