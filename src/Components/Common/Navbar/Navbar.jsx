@@ -9,15 +9,14 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import { IoIosArrowDown } from "react-icons/io";
 import { BiLogIn } from "react-icons/bi";
-import { products } from '../../../DataSets/products'
 import { services } from '../../../DataSets/services'
 import { FlipLinkBtn } from '../../../Designs/FlipLink'
 
 export default function Navbar(){
     const location = useLocation()
-    const [isAboutUsDropDownOpen, setIsAboutUsDropDownOpen] = useState(false)
+    // const [isAboutUsDropDownOpen, setIsAboutUsDropDownOpen] = useState(false)
     const [isServicesDropDownOpen, setIsServicesDropDownOpen] = useState(false)
-    const [isProductsDropDownOpen, setIsProductsDropDownOpen] = useState(false)
+    // const [isProductsDropDownOpen, setIsProductsDropDownOpen] = useState(false)
     const [ isSticky, setIsSticky ] = useState(false)
     const [isHovered, setIsHovered] = useState(false);
 
@@ -25,7 +24,7 @@ export default function Navbar(){
 
     const toggleMenu = () => {
         setMobileMenu(!mobileMenu)
-        }
+    }
 
     useEffect(() => {
         const handleScroll = () => {
