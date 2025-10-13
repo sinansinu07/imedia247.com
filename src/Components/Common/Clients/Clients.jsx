@@ -101,7 +101,7 @@ export default function Clients() {
                         </motion.div>
                         <motion.h1 variants={childVariants1} className="main-title">Our <span className="color">Clients</span></motion.h1>
                     </div>
-                    <motion.p variants={childVariants1}>We make scaffolding easy - with a clear process that gets your project off the ground without delay.</motion.p>
+                    <motion.p variants={childVariants1}>We make digital advertising easy - with a clear process that gets your project off the ground without delay.</motion.p>
                 </motion.div>
                 <div className="clients-container">
                     <Splide
