@@ -4,16 +4,16 @@ import image3 from "../Assets/Projects/project4.webp";
 import image4 from "../Assets/Projects/project3.webp";
 import image5 from "../Assets/Projects/project1.webp";
 
-import icon11 from "../Assets/Icons/icon1.png"
-import icon12 from "../Assets/Icons/icon1.png"
-import icon21 from "../Assets/Icons/icon2.png"
-import icon22 from "../Assets/Icons/icon2.png"
-import icon31 from "../Assets/Icons/icon3.png"
-import icon32 from "../Assets/Icons/icon3.png"
-import icon41 from "../Assets/Icons/icon4.png"
-import icon42 from "../Assets/Icons/icon4.png"
-import icon51 from "../Assets/Icons/icon5.png"
-import icon52 from "../Assets/Icons/icon5.png"
+import icon11 from "../Assets/Icons/icon11.png"
+import icon12 from "../Assets/Icons/icon11.png"
+import icon21 from "../Assets/Icons/icon22.png"
+import icon22 from "../Assets/Icons/icon22.png"
+import icon31 from "../Assets/Icons/icon33.png"
+import icon32 from "../Assets/Icons/icon33.png"
+import icon41 from "../Assets/Icons/icon44.png"
+import icon42 from "../Assets/Icons/icon44.png"
+import icon51 from "../Assets/Icons/icon55.png"
+import icon52 from "../Assets/Icons/icon55.png"
 
 
 export const services = [

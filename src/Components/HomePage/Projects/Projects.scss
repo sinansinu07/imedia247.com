@@ -3,7 +3,7 @@
 .project-section {
     display: flex;
     flex-direction: column;
-    background: black;
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
     color: white;
     padding-top: 100px;
     padding-bottom: 100px;

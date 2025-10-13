@@ -11,7 +11,7 @@ import "./HomeHero.scss";
 // import video2 from "../../../Assets/Banners/3.jpg";
 // import video3 from "../../../Assets/Banners/2.jpg";
 // import video4 from "../../../Assets/Banners/4.jpg";
-import image from "../../../Assets/Banners/banner.webp"
+import image from "../../../Assets/Banners/bnner-video.mp4"
 import { FlipLinkBtn } from "../../../Designs/FlipLink";
 
 const services = [
@@ -117,14 +117,18 @@ export default function HomeHero() {
     <div className="hero">
       <div className="overlay"></div>
       <AnimatePresence mode="wait">
-        <motion.img
-        className="banner-video"
+        <motion.video
+          className="banner-video"
           key={currentSlide?.video}
           src={currentSlide?.video}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .5 }} // Duration of fade effect
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       </AnimatePresence>
       <motion.div variants={textVariants} className="hero-content" style={{ y:yBg}}>

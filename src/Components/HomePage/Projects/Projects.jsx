@@ -96,7 +96,7 @@ export default function Projects() {
                         <motion.hr className="head-top-hr"/>
                         <motion.h3 className="top-title">What we have done</motion.h3>
                     </motion.div>
-                    <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Projects</span></motion.h1>
+                    <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="text-black">Projects</span></motion.h1>
                 </div>
                 <div className="project-container">
                     {projects.map((project) => {
