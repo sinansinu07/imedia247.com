@@ -4,18 +4,57 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    align-items: stretch;
+    gap: 80px;
+    background: linear-gradient(
+    to bottom,
+    rgba(173, 129, 77, 0.8) 0%,      /* Seamless from above */
+    rgba(139, 97, 45, 0.9) 70%,      /* Rich bronze-gold */
+    rgba(126, 82, 26, 0.95) 100%     /* Deep dark finish */
+    );
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+
+    // Add decorative background elements
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 40%;
+        height: 200%;
+        background: radial-gradient(circle, rgba($primary, 0.1) 0%, transparent 70%);
+        animation: float 8s ease-in-out infinite;
+        z-index: 1;
+    }
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: -30%;
+    //     left: -10%;
+    //     width: 30%;
+    //     height: 160%;
+    //     background: radial-gradient(circle, rgba($secondary, 0.08) 0%, transparent 70%);
+    //     animation: float 6s ease-in-out infinite reverse;
+    //     z-index: 1;
+    // }
 
     .contact-info {
         width: 60%;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
 
         .head-div {
             p {
                 max-width: 600px;
+                font-size: 18px;
+                line-height: 1.6;
+                color: $white;
             }
         }
 
@@ -23,28 +62,69 @@
             margin: auto;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 25px;
             width: 100%;
+            background: $white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            
+
+            // Add gradient accent
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 4px;
+            //     background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+            //     z-index: 1;
+            // }
     
             .sameline {
                 display: flex;
                 flex-direction: row;
-                gap: 10px;
+                gap: 20px;
                 width: 100%;
             }
           
             .form-field {
                 width: 100%;
-                .MuiOutlinedInput-root.Mui-focused fieldset {
-                    border-color: $primary;
+                border-radius: 12px;
+                
+                .MuiOutlinedInput-root {
+                    border-radius: 12px;
+                    background: #f8f9fa;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: #ffffff;
+                        box-shadow: 0 4px 15px rgba($primary, 0.1);
+                    }
+                }
+                
+                .MuiOutlinedInput-root.Mui-focused {
+                    background: #ffffff;
+                    box-shadow: 0 8px 25px rgba($primary, 0.15);
+                    
+                    fieldset {
+                        border-color: $primary;
+                        border-width: 2px;
+                        border-radius: 12px;
+                    }
                 }
             
                 label.Mui-focused {
                     color: $primary;
+                    font-weight: 600;
                 }
 
                 .btn {
                     margin-right: auto;
+                    margin-top: 10px;
                 }
             }
         }
@@ -54,66 +134,203 @@
         display: flex;
         flex-direction: column;
         width: 40%;
-        gap: 30px;
+        gap: 0px;
+        position: relative;
+        z-index: 2;
 
         .head {
-            font-size: 30px;
+            font-size: 32px;
+            font-weight: 700;
+            color: $primary;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .contact-details {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
 
             .contact {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 0px;
+                padding: 20px 30px;
+                background: $white;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                border: 1px solid rgba($primary, 0.1);
+                position: relative;
+                overflow: hidden;
+
+                // // Add subtle gradient overlay
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+                    z-index: 1;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+                }
 
                 .head {
-                    font-size: 16px;
+                    font-size: 18px;
                     text-transform: uppercase;
-                    color: gray;
-                }
-
-                .content a {
-                    color: $black;
-                }
-
-                .content a:hover {
                     color: $primary;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
                 }
 
-                .content p {
-                    font-weight: 600;
+                .content {
+                    position: relative;
+                    z-index: 2;
+
+                    a {
+                        color: #333;
+                        text-decoration: none;
+                        transition: all 0.3s ease;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: $primary;
+                            transform: translateX(5px);
+                        }
+                    }
+
+                    p {
+                        font-weight: 500;
+                        color: #666;
+                        margin: 5px 0;
+                        line-height: 1.6;
+                    }
                 }
             }
         }
 
         .social-links {
-            margin-top: 20px;
+            margin-top: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 20px;
+            justify-content: center;
             
             a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: black;
-                font-size: 25px;
-                color: white;
-                transition: .3s;
-                width: 50px;
-                height: 50px;
+                background: $white;
+                font-size: 22px;
+                color: $primary;
+                transition: all 0.3s ease;
+                width: 55px;
+                height: 55px;
                 border-radius: 50%;
-            }
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+                border: 2px solid rgba($primary, 0.1);
 
-            a:hover {
-                background: $primary;
-                transition: .3s;
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                    transform: translateY(-5px) scale(1.1);
+                    box-shadow: 0 15px 35px rgba($primary, 0.3);
+                }
             }
         }
     }  
+}
+
+// Floating animation for decorative elements
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+        gap: 50px;
+        padding: 60px 0;
+
+        .contact-info {
+            width: 100%;
+
+            .contact-form {
+                padding: 30px 20px;
+
+                .sameline {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
+        }
+
+        .contact-form-div {
+            width: 100%;
+            gap: 30px;
+
+            .contact-details {
+                gap: 20px;
+
+                .contact {
+                    padding: 20px;
+                }
+            }
+
+            .social-links {
+                justify-content: center;
+                gap: 15px;
+
+                a {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        .contact-info {
+            .contact-form {
+                padding: 25px 15px;
+            }
+        }
+
+        .contact-form-div {
+            .contact-details {
+                .contact {
+                    padding: 15px;
+                }
+            }
+
+            .social-links {
+                gap: 10px;
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }

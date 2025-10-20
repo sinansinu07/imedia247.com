@@ -12,12 +12,17 @@
     justify-content: space-between;
     align-items: center;
     color: $white;
-    // background: transparent;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding: 5px 50px;
+    margin: 0 100px;
     transition: .5s;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 100px;
+    transition: all 0.5s ease;
+    max-width: 1200px;
 
     .logo-div {
         display: flex;
@@ -28,6 +33,11 @@
         overflow: hidden;
         width: 100px;
         height: 70px;
+        // background: $white;
+        // padding: 10px;
+        // border-radius: 10px;
+        // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        // filter: none;
 
         .menu-icon-close {
             display: none;
@@ -108,13 +118,21 @@
 
             .dropdown {
                 position: absolute;
-                top: 40px;
+                top: 55px;
                 left: -50px;
-                z-index: 1000;
-                // padding: 20px;
-                background: $white;
+                z-index: 10001;
+                transition: .5s;
                 color: $black;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+                background: white;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+                border: 2px solid rgba(255, 255, 255, 0.18);
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
 
                 ul {
                     display: flex;
@@ -131,10 +149,18 @@
                     }
 
                     li a:hover {
-                        color: $primary;
+                        color: $tertiary;
                         transition: .5s;
                     }
                 }
+            }
+
+            // Show dropdown on hover
+            li:hover .dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                transition: all 0.3s ease;
             }
 
             .dropdown.destination {
@@ -170,9 +196,8 @@
 }
 
 .navbar.sticky {
-    background: $white;
-    color: $black;
-    top: 0;
+    // background: $white;
+    // color: $black;
     transition: 1s;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 

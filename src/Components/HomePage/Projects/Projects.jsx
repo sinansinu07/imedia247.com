@@ -2,60 +2,13 @@ import "./Projects.scss"
 
 import project1 from "../../../Assets/Projects/project1.webp"
 import project2 from "../../../Assets/Projects/project2.webp"
-import project3 from "../../../Assets/Projects/project3.webp"
+import project3 from "../../../Assets/Projects/project3-new.webp"
 import project4 from "../../../Assets/Projects/project4.webp"
-import project5 from "../../../Assets/Projects/project5.webp"
-import project6 from "../../../Assets/Projects/project6.webp"
+import project5 from "../../../Assets/Projects/project6.webp"
+import project6 from "../../../Assets/Projects/project8.webp"
 
-
-import { LuMoveRight } from "react-icons/lu"
-import { FlipLinkText } from "../../../Designs/FlipLink"
 import { motion } from "framer-motion"
-
-const projects = [
-    {
-        id: 1,
-        title: "Project 1",
-        location: "Location 1",
-        description: "This is a description of project 1",
-        image: project1,
-    },
-    {
-        id: 2,
-        title: "Project 2",
-        location: "Location 2",
-        description: "This is a description of project 2",
-        image: project2,
-    },
-    {
-        id: 3,
-        title: "Project 3",
-        location: "Location 3",
-        description: "This is a description of project 3",
-        image: project3,
-    },
-    {
-        id: 4,
-        title: "Project 4",
-        location: "Location 4",
-        description: "This is a description of project 4",
-        image: project4,
-    },
-    {
-        id: 5,
-        title: "Project 5",
-        location: "Location 5",
-        description: "This is a description of project 5",
-        image: project5,
-    },
-    {
-        id: 6,
-        title: "Project 6",
-        location: "Location 6",
-        description: "This is a description of project 6",
-        image: project6,
-    },
-]
+import { useState, useEffect } from "react"
 
 const textVariants = {
     initial: {
@@ -87,19 +40,79 @@ const textVariants1 = {
     },
 }
 
+const childVariants = {
+    initial: { x: -100, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+};
+
 export default function Projects() {
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [cursorClass, setCursorClass] = useState('');
+
+    useEffect(() => {
+        let animationFrame;
+        
+        const handleMouseMove = (e) => {
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+            }
+            
+            animationFrame = requestAnimationFrame(() => {
+                setCursorPosition({ x: e.clientX, y: e.clientY });
+            });
+        };
+
+        const handleMouseEnter = (e) => {
+            if (e.target.closest('.project-card-1') || e.target.closest('.project-card-2')) {
+                setCursorClass('cursor-hover');
+            }
+        };
+
+        const handleMouseLeave = (e) => {
+            if (e.target.closest('.project-card-1') || e.target.closest('.project-card-2')) {
+                setCursorClass('');
+            }
+        };
+
+        document.addEventListener('mousemove', handleMouseMove, { passive: true });
+        document.addEventListener('mouseenter', handleMouseEnter, true);
+        document.addEventListener('mouseleave', handleMouseLeave, true);
+
+        return () => {
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+            }
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseenter', handleMouseEnter, true);
+            document.removeEventListener('mouseleave', handleMouseLeave, true);
+        };
+    }, []);
+
     return (
         <section>
             <div className="project-section section-container">
-                <div className="head-div">
-                    <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
-                        <motion.hr className="head-top-hr"/>
-                        <motion.h3 className="top-title">What we have done</motion.h3>
-                    </motion.div>
-                    <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="text-black">Projects</span></motion.h1>
+                {/* Custom Cursor */}
+                <div 
+                    className={`custom-cursor ${cursorClass}`}
+                    style={{
+                        left: cursorPosition.x,
+                        top: cursorPosition.y,
+                    }}
+                />
+                <div className="head-section-div">
+                    <div className="head-div">
+                        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
+                            <motion.hr variants={childVariants} className="head-top-hr"/>
+                            <motion.h3 variants={childVariants} className="top-title">What we have done</motion.h3>
+                        </motion.div>
+                        <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Projects</span></motion.h1>
+                    </div>
+                    <motion.p variants={textVariants1} initial="initial" whileInView="animate">
+                        We are proud to showcase our work and the results we have achieved for our clients.
+                    </motion.p>
                 </div>
                 <div className="project-container">
-                    {projects.map((project) => {
+                    {/* {projects.map((project) => {
                         return (
                             <div className="project-card" key={project.id}>
                                 <div className="project-img-div">
@@ -117,7 +130,87 @@ export default function Projects() {
                                 </div>
                             </div>  
                         )
-                    })}
+                    })} */}
+                     <div className="project-grid-row">
+                         <div className="project-card-1">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project1} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 1</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location-1</p>
+                             </div>
+                         </div>
+                         <div className="project-card-2">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project2} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 2</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location 2</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div className="project-grid-row second-row">
+                         <div className="project-card-1">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project3} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 3</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location-3</p>
+                             </div>
+                         </div>
+                         <div className="project-card-2">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project4} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 4</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location 4</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div className="project-grid-row third-row">
+                         <div className="project-card-1">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project5} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 3</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location-3</p>
+                             </div>
+                         </div>
+                         <div className="project-card-2">
+                             <div className="project-img-div">
+                                 <div className="overlay"></div>
+                                 <img className="project-image" src={project6} alt="" />
+                             </div>
+                             <div className="project-title">
+                                 <h3 className="project-name">Project 4</h3>
+                             </div>
+                             <div className="project-location">
+                                 <p className="project-location">Location 4</p>
+                             </div>
+                         </div>
+                     </div>
                 </div>
             </div>
         </section>

@@ -106,7 +106,7 @@ export default function Process() {
                 </div>
                 <div className="process-content-div">
                     <hr className="process-hr"/>
-                    <motion.div 
+                    <div 
                         variants={gridContainerVariants}
                         initial="hidden"
                         whileInView="show"
@@ -114,18 +114,19 @@ export default function Process() {
                         className="process-content">
                         { process.map((ele) => {
                             return (
-                                <motion.div 
+                                <div 
                                     key={ele.id} 
                                     className="process"
+                                    data-step={ele.id}
                                     variants={gridSquareVariants}
                                     viewport={{ once: false, amount: 0.5 }}>
                                     <div className="circle"></div>
                                     <h1 className="title">{ele.title}</h1>
                                     <p className="description">{ele.description}</p>
-                                </motion.div>
+                                </div>
                             )
                         })}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

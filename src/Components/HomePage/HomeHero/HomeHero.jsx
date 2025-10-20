@@ -131,7 +131,7 @@ export default function HomeHero() {
           playsInline
         />
       </AnimatePresence>
-      <motion.div variants={textVariants} className="hero-content" style={{ y:yBg}}>
+      {/* <motion.div variants={textVariants} className="hero-content" style={{ y:yBg}}>
         <motion.div className="head-div">
           <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
             <motion.hr variants={childVariants} className="head-top-hr"/>
@@ -158,65 +158,11 @@ export default function HomeHero() {
           onMouseLeave={() => setIsHovered(false)}>
           <FlipLinkBtn isHovered={isHovered}>Contact Us</FlipLinkBtn>
         </motion.a>
-      </motion.div>
-      {/* <div className="dotsContainer">
-        {services.map((ele, index) => (
-          <div
-            key={ele.id}
-            className={`dotWrapper ${
-              ele.id === currentSlide.id ? 'dotWrapperActive' : 'dotWrapperInactive'
-            }`}
-            onClick={() => handleDotClick(ele)}
-          >
-            <div
-              className={`dot ${
-                ele.id === currentSlide.id ? 'dotActive' : 'dotInactive'
-              }`}
-            ></div>
-          </div>
-        ))}
-      </div> */}
-
-      {/* <div className="service-container-div">
-        <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={3}
-          loop={true}
-          speed={2500} // 2.5 seconds per transition
-          autoplay={{
-            delay: 2000,           // 0 delay between slides
-            disableOnInteraction: false,
-          }}
-          freeMode={true} // Enables smooth continuous scroll
-          // breakpoints={{
-          //   640: { slidesPerView: 1 },
-          //   768: { slidesPerView: 2 },
-          //   1024: { slidesPerView: 3 },
-          // }}
-          onRealIndexChange={(swiper) => {
-            // When the real index changes (ignores duplicated slides from loop)
-            setCurrentSlide(services[swiper.realIndex]);
-          }}
-        >
-          {services.map((ele) => (
-            <SwiperSlide key={ele.id}>
-              <div 
-                className="service-container"
-                onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
-                onMouseLeave={() => swiperRef.current?.autoplay?.start()}
-                onClick={() => handleDotClick(ele)}
-                style={{ position: 'relative' }}
-              >
-                <div className="overlay2"></div>
-                <img className="service-img" src={ele.video} alt="" />
-                <h1 className="service-text">{ele.title}</h1>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div> */}
+      </motion.div> */}
+      <div className="hero-content">
+        <h2 className="new-top-title">Leading Outdoor & Digital Media Partner Across UAE & KSA</h2>
+        <h1 className="new-main-title">Premium <span className="secondary-color">OOH & Digital Advertising</span><br/> Solutions That Elevate Your Brand</h1>
+      </div>
     </div>
   );
 }

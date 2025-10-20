@@ -85,24 +85,25 @@ const childVariants = {
 };
 
 const childVariants1 = {
-    initial: { y: 50, opacity: 0 },
+    initial: { y: 100, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { duration: 0.6 } },
 };
+
 
 export default function Clients() {
     return (
         <section>
             <div className="clients-section section-container">
-                <motion.div className="head-div" variants={textVariants} initial="initial" whileInView="animate">
-                    <div>
-                        <motion.div className="head-top" variants={childVariants}>
-                            <hr className="head-top-hr"/>
-                            <h3 className="top-title">Where We Work</h3>
+                <div className="head-container">
+                    <div className="head-div">
+                        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
+                            <motion.hr variants={childVariants} className="head-top-hr"/>
+                            <motion.h3 variants={childVariants} className="top-title">Where We Work</motion.h3>
                         </motion.div>
-                        <motion.h1 variants={childVariants1} className="main-title">Our <span className="color">Clients</span></motion.h1>
+                        <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Clients</span></motion.h1>
                     </div>
-                    <motion.p variants={childVariants1}>We make digital advertising easy - with a clear process that gets your project off the ground without delay.</motion.p>
-                </motion.div>
+                    <motion.p variants={textVariants1} initial="initial" whileInView="animate">We are proud to partner with leading brands across UAE & KSA, delivering exceptional OOH and digital advertising solutions that drive results.</motion.p>
+                </div>
                 <div className="clients-container">
                     <Splide
                         options={{

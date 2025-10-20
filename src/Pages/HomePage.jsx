@@ -19,13 +19,13 @@ export default function HomePage() {
                 <HomeHero/>
                 <AboutCompany/>
                 <Services/>
-                <Projects/>
                 <WhyChooseUs/>
+                <Projects/>
                 <Testimonials/>
                 {/* <HomeGallery/> */}
                 <Process/>
-                <ContactForm/>
                 <Clients/>
+                <ContactForm/>
             {/* </Helmet> */}
         </Fragment>
     )

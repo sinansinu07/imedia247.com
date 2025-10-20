@@ -2,7 +2,7 @@ import "./Testimonials.scss"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
-import image from "../../../Assets/Common/dummy.jpg"
+import image from "../../../Assets/Common/dummy.png"
 import { motion } from "framer-motion";
 import { FlipLinkBtn } from "../../../Designs/FlipLink";
 import { useState } from "react";

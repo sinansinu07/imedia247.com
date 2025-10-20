@@ -80,9 +80,31 @@ export default function WhyChooseUs() {
         animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     };
 
-    const childVariants1 = {
-        initial: { y: 50, opacity: 0 },
-        animate: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+
+    const statsVariants = {
+        initial: { scale: 0.8, opacity: 0 },
+        animate: { 
+            scale: 1, 
+            opacity: 1, 
+            transition: { 
+                duration: 0.8,
+                type: "spring",
+                stiffness: 100
+            } 
+        },
+    };
+
+    const itemVariants = {
+        initial: { x: -50, opacity: 0 },
+        animate: { 
+            x: 0, 
+            opacity: 1, 
+            transition: { 
+                duration: 0.8,
+                type: "spring",
+                stiffness: 80
+            } 
+        },
     };
 
     return (
@@ -101,23 +123,47 @@ export default function WhyChooseUs() {
                     </motion.div>
                 </div>
                 <div className="content-div">
-                    <div ref={ref} className="stats-container">
-                        {stats.map((stat) => {
+                    <motion.div 
+                        ref={ref} 
+                        className="stats-container"
+                        variants={textVariants1}
+                        initial="initial"
+                        whileInView="animate"
+                    >
+                        {stats.map((stat, index) => {
                             return (
-                                <div className="stats" key={stat.id}>
+                                <motion.div 
+                                    className="stats" 
+                                    key={stat.id}
+                                    variants={statsVariants}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    transition={{ delay: index * 0.2 }}
+                                >
                                     <h1 className="stat-number">
-                                        {/* {stat.numbers} */}
                                         {inView && <CountUp end={stat.numbers} duration={3} />}+
-                                        </h1>
+                                    </h1>
                                     <h2 className="stat-title">{stat.title}</h2>
-                                </div>
+                                </motion.div>
                             )
                         })}
-                    </div>
-                    <div className="item-container">
-                        {items.map((item) => {
+                    </motion.div>
+                    <div 
+                        className="item-container"
+                        variants={textVariants}
+                        initial="initial"
+                        whileInView="animate"
+                    >
+                        {items.map((item, index) => {
                             return (
-                                <div className="item">
+                                <div 
+                                    className="item"
+                                    key={item.id}
+                                    variants={itemVariants}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    transition={{ delay: index * 0.3 }}
+                                >
                                     <div className="si-no">
                                         0{item.id}
                                     </div>

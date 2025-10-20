@@ -2,6 +2,15 @@
 
 .services-section {
     display: block;
+    background: linear-gradient(
+        to bottom,
+        #F8E8C8 0%,                   /* Very light golden top */
+        rgba(240, 210, 140, 0.25) 15%, /* Soft light gold glow */
+        rgba(192, 152, 85, 0.45) 35%,  /* Warm mid-light gold */
+        rgba(173, 129, 77, 0.7) 65%,   /* Deep gold mid-tone */
+        rgba(126, 82, 26, 0.9) 100%    /* Dark golden bottom */
+    );
+
 
     .head-section-div {
         display: flex;
@@ -108,10 +117,13 @@
             margin-top: 30px;
             display: flex;
             flex-direction: row;
+            border-radius: 50px;
+            overflow: hidden;
 
             .img-div {
                 width: 60%;
                 height: 500px;
+                border-top-left-radius: 50px;
 
                 img {
                     width: 100%;

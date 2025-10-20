@@ -124,8 +124,8 @@ export default function Navbar(){
                 <li><a href="/assets" className={location.pathname==="/assets" ? "" : ""}>Assets</a></li>
                 <li><a href="/" className={location.pathname==="/blogs" ? "" : ""}>Blog</a></li>
             </ul>
-            <hr className='menu-hr'/>
-            <BiLogIn className='login-icon'/>
+        </div>
+        <div className="button-div">
             <a href="/">
                 <div 
                     className="btn btn-primary"
@@ -135,9 +135,6 @@ export default function Navbar(){
                 </div>
             </a>
         </div>
-        {/* <div className="button-div"> */}
-            
-        {/* </div> */}
         </div>
     )
 }

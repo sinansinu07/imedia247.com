@@ -65,7 +65,7 @@ export default function ContactForm() {
     };
 
     const childVariants1 = {
-        initial: { y: 50, opacity: 0 },
+        initial: { y: 100, opacity: 0 },
         animate: { y: 0, opacity: 1, transition: { duration: 0.6 } },
     };
 
@@ -73,14 +73,14 @@ export default function ContactForm() {
         <section id="contact-form">
             <div className="contact-form section-container">
                 <div className="contact-info">
-                    <motion.div className="head-div" variants={textVariants} initial="initial" whileInView="animate">
-                        <motion.div className="head-top" variants={textVariants} initial="initial" whileInView="animate">
+                    <div className="head-div">
+                        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
                             <motion.hr variants={childVariants} className="head-top-hr"/>
                             <motion.h3 variants={childVariants} className="top-title">Contact us</motion.h3>
                         </motion.div>
                         <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Do You any<span className="color"> Questions?</span></motion.h1>
                         <motion.p variants={textVariants1} initial="initial" whileInView="animate">IMEDIA is a leading provider of OOH and digital advertising solutions across UAE & KSA. We are committed to delivering exceptional results that maximize brand visibility and drive engagement.</motion.p>
-                    </motion.div>
+                    </div>
                     <motion.form
                         component="form"
                         onSubmit={handleSubmit}

@@ -70,6 +70,9 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="footer-bottom">
+                <p>&copy; 2024 IMedia247. All rights reserved. | Leading OOH & Digital Advertising in UAE & KSA</p>
+            </div>
         </footer>
     )
 }
