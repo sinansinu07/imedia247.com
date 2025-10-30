@@ -4,7 +4,13 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(248, 249, 250, 0.9) 0%,     /* Match Process section end color */
+        #f8f9fa 10%,                      /* Transition to full white */
+        #e9ecef 60%,                      /* Light gray */
+        rgba(173, 129, 77, 0.8) 100%     /* Transition to bronze-gold for Contact Form */
+    );
     padding: 100px 0;
     position: relative;
     overflow: hidden;

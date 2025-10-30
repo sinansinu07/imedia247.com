@@ -6,7 +6,13 @@
     justify-content: space-between;
     align-items: center;
     gap: 80px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(248, 249, 250, 0.9) 0%,     /* Match Projects section end color */
+        #f8f9fa 10%,                      /* Transition to full white */
+        #e9ecef 60%,                      /* Light gray */
+        rgba(126, 82, 26, 0.9) 100%      /* Transition to dark brown for Process section */
+    );
     position: relative;
     overflow: hidden;
     padding: 100px 0;

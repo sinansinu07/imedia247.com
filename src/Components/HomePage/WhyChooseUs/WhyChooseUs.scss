@@ -2,7 +2,13 @@
 
 .why-choose-us {
     display: block;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(248, 249, 250, 0.9) 0%,     /* Match Services section end color */
+        #f8f9fa 10%,                      /* Transition to full white */
+        #e9ecef 60%,                      /* Light gray */
+        rgba(126, 82, 26, 0.9) 100%      /* Transition to dark brown for Projects section */
+    );
     position: relative;
     overflow: hidden;
 

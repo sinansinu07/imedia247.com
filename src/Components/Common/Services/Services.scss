@@ -6,7 +6,8 @@
         to bottom,
         rgba(192, 152, 85, 0.7) 0%,      /* Continue from above */
         rgba(205, 163, 96, 0.65) 50%,    /* Softer gold highlight */
-        rgba(173, 129, 77, 0.8) 100%     /* Return to medium tone */
+        rgba(173, 129, 77, 0.8) 80%,     /* Brown tone */
+        rgba(248, 249, 250, 0.9) 100%    /* Transition to white for smooth connection */
       );
 
 
