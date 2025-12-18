@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Black.eot');
+    src: url('Helixa-Black.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Black.woff2') format('woff2'),
+        url('Helixa-Black.woff') format('woff'),
+        url('Helixa-Black.svg#Helixa-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Bold.eot');
+    src: url('Helixa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Bold.woff2') format('woff2'),
+        url('Helixa-Bold.woff') format('woff'),
+        url('Helixa-Bold.svg#Helixa-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-BlackItalic.eot');
+    src: url('Helixa-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-BlackItalic.woff2') format('woff2'),
+        url('Helixa-BlackItalic.woff') format('woff'),
+        url('Helixa-BlackItalic.svg#Helixa-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-BoldItalic.eot');
+    src: url('Helixa-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-BoldItalic.woff2') format('woff2'),
+        url('Helixa-BoldItalic.woff') format('woff'),
+        url('Helixa-BoldItalic.svg#Helixa-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Regular.eot');
+    src: url('Helixa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Regular.woff2') format('woff2'),
+        url('Helixa-Regular.woff') format('woff'),
+        url('Helixa-Regular.svg#Helixa-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa Book';
+    src: url('Helixa-Book.eot');
+    src: url('Helixa-Book.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Book.woff2') format('woff2'),
+        url('Helixa-Book.woff') format('woff'),
+        url('Helixa-Book.svg#Helixa-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-LightItalic.eot');
+    src: url('Helixa-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-LightItalic.woff2') format('woff2'),
+        url('Helixa-LightItalic.woff') format('woff'),
+        url('Helixa-LightItalic.svg#Helixa-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Thin.eot');
+    src: url('Helixa-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Thin.woff2') format('woff2'),
+        url('Helixa-Thin.woff') format('woff'),
+        url('Helixa-Thin.svg#Helixa-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-ThinItalic.eot');
+    src: url('Helixa-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-ThinItalic.woff2') format('woff2'),
+        url('Helixa-ThinItalic.woff') format('woff'),
+        url('Helixa-ThinItalic.svg#Helixa-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Italic.eot');
+    src: url('Helixa-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Italic.woff2') format('woff2'),
+        url('Helixa-Italic.woff') format('woff'),
+        url('Helixa-Italic.svg#Helixa-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa';
+    src: url('Helixa-Light.eot');
+    src: url('Helixa-Light.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-Light.woff2') format('woff2'),
+        url('Helixa-Light.woff') format('woff'),
+        url('Helixa-Light.svg#Helixa-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helixa Book';
+    src: url('Helixa-BookItalic.eot');
+    src: url('Helixa-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('Helixa-BookItalic.woff2') format('woff2'),
+        url('Helixa-BookItalic.woff') format('woff'),
+        url('Helixa-BookItalic.svg#Helixa-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+

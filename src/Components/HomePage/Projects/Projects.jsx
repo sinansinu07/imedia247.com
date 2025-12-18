@@ -1,4 +1,5 @@
 import "./Projects.scss"
+import { motion } from "framer-motion"
 
 import project1 from "../../../Assets/Projects/project1.webp"
 import project2 from "../../../Assets/Projects/project2.webp"
@@ -7,7 +8,40 @@ import project4 from "../../../Assets/Projects/project4.webp"
 import project5 from "../../../Assets/Projects/project6.webp"
 import project6 from "../../../Assets/Projects/project8.webp"
 
- 
+const textVariants = {
+    initial: {
+        x: -100,
+        opacity: 0
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.3
+        }
+    },
+}
+
+const textVariants1 = {
+    initial: {
+        y: 100,
+        opacity: 0
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.3
+        }
+    },
+}
+
+const childVariants = {
+    initial: { x: -100, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+};
 
 export default function Projects() {
     const projects = [
@@ -22,7 +56,7 @@ export default function Projects() {
     return (
         <section>
             <div className="project-section section-container">
-                <div className="head-section-div">
+                {/* <div className="head-section-div">
                     <div className="head-div">
                         <div className="head-top">
                             <hr className="head-top-hr"/>
@@ -33,6 +67,18 @@ export default function Projects() {
                     <p>
                         We are proud to showcase our work and the results we have achieved for our clients.
                     </p>
+                </div> */}
+                <div className="head-div">
+                    <div className="left">
+                        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
+                            <motion.hr variants={childVariants} className="head-top-hr"/>
+                            <motion.h3 variants={childVariants} className="top-title">What we have done</motion.h3>
+                        </motion.div>
+                        <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Projects</span></motion.h1>
+                    </div>
+                    <motion.div variants={textVariants1} initial="initial" whileInView="animate" className="right">
+                        We are proud to showcase our work and the results we have achieved for our clients.
+                    </motion.div>
                 </div>
                 <div className="project-container">
                     <div className="projects-grid">

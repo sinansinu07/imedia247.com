@@ -114,6 +114,24 @@ export default function Clients() {
                             speed: 1000,
                             rewind: true,
                             rewindByDrag: true,
+                            breakpoints: {
+                                1024: {
+                                    perPage: 4,
+                                    gap: "15px",
+                                },
+                                768: {
+                                    perPage: 3,
+                                    gap: "15px",
+                                },
+                                480: {
+                                    perPage: 2,
+                                    gap: "12px",
+                                },
+                                320: {
+                                    perPage: 1,
+                                    gap: "10px",
+                                },
+                            },
                         }}
                     >
                         {testimonials.map((item) => (

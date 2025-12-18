@@ -2,6 +2,7 @@ import "./WhyChooseUs.scss"
 import { motion } from "framer-motion"
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import bgImage from "../../../Assets/Projects/project6.webp";
 
 const stats = [
     {
@@ -129,7 +130,9 @@ export default function WhyChooseUs() {
                         variants={textVariants1}
                         initial="initial"
                         whileInView="animate"
+                        style={{ backgroundImage: `url(${bgImage})` }}
                     >
+                        <div className="overlay"></div>
                         {stats.map((stat, index) => {
                             return (
                                 <motion.div 

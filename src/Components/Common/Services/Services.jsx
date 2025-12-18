@@ -60,17 +60,17 @@ export default function Services() {
     return (
         <section>
             <div className="services-section section-container">
-                <div className="head-section-div">
-                    <div className="head-div">
+            <div className="head-div">
+                    <div className="left">
                         <motion.div variants={textVariants} initial="initial" whileInView="animate" className="head-top">
                             <motion.hr variants={childVariants} className="head-top-hr"/>
                             <motion.h3 variants={childVariants} className="top-title">What we do</motion.h3>
                         </motion.div>
                         <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Services</span></motion.h1>
                     </div>
-                    <motion.p variants={textVariants1} initial="initial" whileInView="animate">
+                    <motion.div variants={textVariants1} initial="initial" whileInView="animate" className="right">
                         At IMedia, we pride ourselves on delivering top-quality OOH and digital advertising products that meet international safety standards. With over 20 years of experience, our offerings are trusted by industry leaders across the UAE & KSA for their reliability and performance. 
-                    </motion.p>
+                    </motion.div>
                 </div>
                 <div className="services-container">
                     <div className="service-head-div">
