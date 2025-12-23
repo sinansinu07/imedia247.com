@@ -323,7 +323,7 @@
 
 .navbar.sticky {
     top: 20px;
-    padding: 10px 35px;
+    // padding: 10px 35px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -331,10 +331,10 @@
                 0 2px 8px rgba(126, 82, 26, 0.1);
     border: 1px solid rgba(126, 82, 26, 0.1);
 
-    .logo-div {
-        width: 100px;
-        height: 55px;
-    }
+    // .logo-div {
+    //     width: 100px;
+    //     height: 55px;
+    // }
 
     .nav-links-div ul .dropdown {
         top: calc(100% + 25px);
