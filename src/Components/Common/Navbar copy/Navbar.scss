@@ -1,7 +1,7 @@
 // Import color variables from the main index.scss
 @import '../../../index.scss';
 
-.navbar {
+.navbar1 {
     position: fixed;
     top: 15px;
     left: 50%;
@@ -196,7 +196,7 @@
     }
 }
 
-.navbar.sticky {
+.navbar1.sticky {
     // background: $white;
     // color: $black;
     transition: 1s;
