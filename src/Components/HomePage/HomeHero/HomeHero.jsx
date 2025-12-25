@@ -49,7 +49,8 @@ export default function HomeHero() {
   // const yBg = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   const [currentSlide] = useState(services[0]);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
 
   // const handleDotClick = (ele) => {
   //   setCurrentSlide(ele);
@@ -162,6 +163,24 @@ export default function HomeHero() {
       <div className="hero-content">
         <h2 className="new-top-title">Leading Outdoor & Digital Media Partner Across UAE & KSA</h2>
         <h1 className="new-main-title">Premium <span className="secondary-color">OOH & Digital Advertising</span><br/> Solutions That Elevate Your Brand</h1>
+        <div className="hero-content-buttons">
+                <a href="/">
+                    <div 
+                        className="btn btn-primary"
+                        onMouseEnter={() => setIsHovered1(true)}
+                        onMouseLeave={() => setIsHovered1(false)}>
+                        <FlipLinkBtn isHovered={isHovered1}>Learn More</FlipLinkBtn>
+                    </div>
+                </a>
+                <a href="/">
+                    <div 
+                        className="btn btn-secondary"
+                        onMouseEnter={() => setIsHovered2(true)}
+                        onMouseLeave={() => setIsHovered2(false)}>
+                        <FlipLinkBtn isHovered={isHovered2}>Get a Quote</FlipLinkBtn>
+                    </div>
+                </a>
+            </div>
       </div>
     </div>
   );

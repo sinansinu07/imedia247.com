@@ -8,27 +8,26 @@
     gap: 80px;
     background: linear-gradient(
         to bottom,
-        rgba(173, 129, 77, 0.8) 0%,      /* Match Clients section end color */
-        rgba(173, 129, 77, 0.8) 5%,      /* Continue bronze-gold */
-        rgba(139, 97, 45, 0.9) 70%,      /* Rich bronze-gold */
-        rgba(126, 82, 26, 0.95) 100%     /* Deep dark finish */
+        rgba(252, 250, 245, 0.98) 0%,
+        rgba(255, 255, 255, 0.99) 70%,
+        rgba(255, 255, 255, 1) 100%
     );
     padding: 100px 0;
     position: relative;
     overflow: hidden;
 
     // Add decorative background elements
-    &::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -20%;
-        width: 40%;
-        height: 200%;
-        background: radial-gradient(circle, rgba($primary, 0.1) 0%, transparent 70%);
-        animation: float 8s ease-in-out infinite;
-        z-index: 1;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: -50%;
+    //     right: -20%;
+    //     width: 40%;
+    //     height: 200%;
+    //     background: radial-gradient(circle, rgba($primary, 0.1) 0%, transparent 70%);
+    //     animation: float 8s ease-in-out infinite;
+    //     z-index: 1;
+    // }
 
     // &::after {
     //     content: '';
@@ -74,7 +73,7 @@
                     font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    color: $white;
+                    color: $primary;
                 }
             }
 
@@ -82,11 +81,11 @@
                 font-size: 48px;
                 font-weight: 700;
                 line-height: 1.2;
-                color: $white;
+                color: $black;
                 margin: 0;
 
                 .color {
-                    color: $secondary;
+                    color: $primary;
                     position: relative;
                     
                     &::after {
@@ -96,7 +95,7 @@
                         left: 0;
                         width: 100%;
                         height: 3px;
-                        background: linear-gradient(90deg, rgba($secondary, 0.3) 0%, transparent 100%);
+                        background: linear-gradient(90deg, rgba($primary, 0.3) 0%, transparent 100%);
                         border-radius: 2px;
                     }
                 }
@@ -106,7 +105,7 @@
                 max-width: 600px;
                 font-size: 18px;
                 line-height: 1.8;
-                color: $white;
+                color: #555;
                 font-weight: 400;
                 margin: 0;
             }
@@ -367,7 +366,7 @@
                         font-weight: 600;
                         text-transform: uppercase;
                         letter-spacing: 1.5px;
-                        color: $white;
+                        color: $primary;
                     }
                 }
 
@@ -443,7 +442,7 @@
                         font-weight: 600;
                         text-transform: uppercase;
                         letter-spacing: 1px;
-                        color: $white;
+                        color: $primary;
                     }
                 }
 

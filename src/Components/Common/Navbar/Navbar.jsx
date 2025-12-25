@@ -224,11 +224,11 @@ export default function Navbar(){
                         </AnimatePresence>
                     </li> */}
                     <li><a href="/assets" className={location.pathname==="/assets" ? "" : ""}>Assets</a></li>
-                    <li><a href="/" className={location.pathname==="/blogs" ? "" : ""}>Blog</a></li>
+                    <li><a href="/blogs" className={location.pathname==="/blogs" ? "" : ""}>Blog</a></li>
                 </ul>
             </div>
             <div className="button-div">
-                <a href="/">
+                <a href="/contact-us">
                     <div 
                         className="btn btn-primary"
                         onMouseEnter={() => setIsHovered(true)}

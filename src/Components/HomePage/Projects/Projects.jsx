@@ -74,7 +74,7 @@ export default function Projects() {
                             <motion.hr variants={childVariants} className="head-top-hr"/>
                             <motion.h3 variants={childVariants} className="top-title">What we have done</motion.h3>
                         </motion.div>
-                        <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Projects</span></motion.h1>
+                        <motion.h1 variants={textVariants1} initial="initial" whileInView="animate" className="main-title">Our <span className="color">Assets</span></motion.h1>
                     </div>
                     <motion.div variants={textVariants1} initial="initial" whileInView="animate" className="right">
                         We are proud to showcase our work and the results we have achieved for our clients.

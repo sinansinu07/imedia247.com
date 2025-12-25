@@ -2,13 +2,8 @@
 
 footer {
     padding: 80px 100px 40px;
-    background: linear-gradient(
-    to bottom,
-    rgba(126, 82, 26, 0.95) 0%,      /* Match section 3 bottom */
-    rgba(90, 58, 18, 0.95) 60%,      /* Deep brownish-gold shadow */
-    rgba(65, 41, 13, 1) 100%         /* Subtle dark bronze footer base */
-    );
-    color: $white;
+    background: rgba(255, 255, 255, 1);
+    color: $black;
     position: relative;
     overflow: hidden;
 
@@ -44,7 +39,7 @@ footer {
         margin-top: 30px;
         border: none;
         height: 2px;
-        background: #eaeaea;
+        background: rgba($primary, 0.1);
         margin: 0 auto;
     }
 
@@ -86,7 +81,7 @@ footer {
                 text-transform: uppercase;
                 font-size: 22px;
                 font-weight: 700;
-                color: $white;
+                color: $primary;
                 margin-bottom: 25px;
                 position: relative;
                 
@@ -107,11 +102,10 @@ footer {
 
                 .logo {
                     width: 140px;
-                    margin-bottom: 20px;
+                    // margin-bottom: 20px;
                     background: $white;
-                    padding: 15px;
                     border-radius: 10px;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
                     filter: none;
                 }
 
@@ -119,7 +113,7 @@ footer {
                     margin-top: 20px;
                     font-size: 15px;
                     line-height: 1.6;
-                    color: rgba(255, 255, 255, 0.9);
+                    color: #555;
                     // padding-right: 50px;
                 }
             }
@@ -131,7 +125,7 @@ footer {
                     font-size: 16px;
                     text-transform: uppercase;
                     font-weight: 600;
-                    color: $white;
+                    color: $primary;
                     margin-bottom: 15px;
                 }
 
@@ -139,19 +133,19 @@ footer {
                     font-size: 14px;
                     margin-top: 8px;
                     transition: all 0.3s ease;
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #666;
                 }
 
                 p a {
                     font-size: 14px;
                     margin-top: 8px;
                     transition: all 0.3s ease;
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #666;
                     text-decoration: none;
                 }
 
                 p a:hover {
-                    color: $tertiary;
+                    color: $primary;
                     transform: translateX(5px);
                     transition: all 0.3s ease;
                 }
@@ -167,7 +161,7 @@ footer {
                     transition: all 0.3s ease;
 
                     a {
-                        color: rgba(255, 255, 255, 0.8);
+                        color: #666;
                         text-decoration: none;
                         transition: all 0.3s ease;
                         position: relative;
@@ -188,7 +182,7 @@ footer {
                     }
 
                     a:hover {
-                        color: $tertiary;
+                        color: $primary;
                         transform: translateX(10px);
                         transition: all 0.3s ease;
                         
@@ -199,7 +193,7 @@ footer {
                     }
 
                     a.active {
-                        color: $tertiary;
+                        color: $primary;
                         font-weight: 600;
                         
                         &::before {
@@ -216,7 +210,7 @@ footer {
                 p {
                     font-size: 15px;
                     line-height: 1.6;
-                    color: rgba(255, 255, 255, 0.9);
+                    color: #555;
                     margin-bottom: 20px;
                 }
 
@@ -225,11 +219,10 @@ footer {
                     display: flex;
                     flex-direction: row;
                     gap: 5px;
-                    background: rgba(255, 255, 255, 0.1);
+                    background: #f8f9fa;
                     padding: 5px;
                     border-radius: 15px;
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border: 1px solid rgba($primary, 0.1);
 
                     input {
                         padding: 15px 20px;
@@ -241,26 +234,25 @@ footer {
                         justify-content: flex-start;
                         width: 100%;
                         background: transparent;
-                        color: $white;
+                        color: $black;
                         border-radius: 10px;
                         font-size: 14px;
                         
                         &::placeholder {
-                            color: rgba(255, 255, 255, 0.6);
+                            color: #999;
                         }
                         
                         &:focus {
-                            background: rgba(255, 255, 255, 0.1);
+                            background: rgba(255, 255, 255, 0.8);
                         }
                     }
     
                     input:hover {
-                        background: rgba(255, 255, 255, 0.05);
+                        background: rgba(255, 255, 255, 0.6);
                     }
     
-                    button {
-                        display: block;
-                        width: 120px;
+                    .btn-primary {
+                        width: 100px;
                         padding: 15px;
                         background: linear-gradient(135deg, $primary 0%, $secondary 100%);
                         color: $white;
@@ -274,9 +266,9 @@ footer {
                         letter-spacing: 0.5px;
                     }
             
-                    button:hover {
+                    .btn-primary:hover {
                         background: linear-gradient(135deg, $secondary 0%, $primary 100%);
-                        transform: translateY(-2px);
+                        // transform: translateY(-2px);
                         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
                     }
                 }
@@ -285,7 +277,7 @@ footer {
                     margin-top: 30px;
                     font-size: 16px;
                     font-weight: 600;
-                    color: $white;
+                    color: $primary;
                     margin-bottom: 20px;
                 }
 
@@ -302,16 +294,15 @@ footer {
                         justify-content: center;
                         width: 45px;
                         height: 45px;
-                        background: rgba(255, 255, 255, 0.1);
-                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        background: #f8f9fa;
+                        border: 1px solid rgba($primary, 0.2);
                         border-radius: 50%;
                         transition: all 0.3s ease;
-                        backdrop-filter: blur(10px);
                         
                         svg {
                             width: 20px;
                             height: 20px;
-                            color: $white;
+                            color: $primary;
                             transition: all 0.3s ease;
                         }
                     }
@@ -320,7 +311,7 @@ footer {
                         background: linear-gradient(135deg, $primary 0%, $secondary 100%);
                         border-color: $primary;
                         transform: translateY(-3px);
-                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                        box-shadow: 0 8px 25px rgba($primary, 0.3);
                         
                         svg {
                             color: $white;
@@ -336,13 +327,13 @@ footer {
     .footer-bottom {
         margin-top: 50px;
         padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba($primary, 0.1);
         text-align: center;
         position: relative;
         z-index: 2;
         
         p {
-            color: rgba(255, 255, 255, 0.7);
+            color: #666;
             font-size: 14px;
             margin: 0;
         }

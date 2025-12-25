@@ -4,9 +4,13 @@ import "./Footer.scss"
 import { RiInstagramFill } from "react-icons/ri"
 import { useLocation } from "react-router-dom"
 import { FaXTwitter } from "react-icons/fa6";
+import { FlipLinkBtn } from "../../../Designs/FlipLink";
+import { useState } from "react";
 
 export default function Footer() {
     const location = useLocation()
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <footer>
             <div className="footer_row">
@@ -57,7 +61,14 @@ export default function Footer() {
                         <p>Subscribe to our newsletter for the latest OOH advertising trends, campaign insights, and industry updates.</p>
                         <div className="newsletter_input">
                             <input className="input" type="text" placeholder="Enter your email address"/>
-                            <button>Subscribe</button>
+                            <a href="/">
+                                <div 
+                                    className="btn btn-primary"
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}>
+                                    <FlipLinkBtn isHovered={isHovered}>Subscribe</FlipLinkBtn>
+                                </div>
+                            </a>
                         </div>
                         <p className="social_head">Follow us On :</p>
                         <div className="social_links">

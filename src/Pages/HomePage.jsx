@@ -23,7 +23,7 @@ export default function HomePage() {
                 <Projects/>
                 <Testimonials/>
                 {/* <HomeGallery/> */}
-                <Process/>
+                {/* <Process/> */}
                 <Clients/>
                 <ContactForm/>
             {/* </Helmet> */}
