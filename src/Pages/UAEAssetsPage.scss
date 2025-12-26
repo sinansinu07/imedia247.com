@@ -1,0 +1,60 @@
+@import "../index.scss";
+
+.uae-assets-tabs {
+    background: linear-gradient(to bottom, rgba(248, 245, 240, 0.95) 0%, rgba(252, 250, 245, 0.98) 50%, rgba(255, 255, 255, 1) 100%);
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tabs-container {
+        display: flex;
+        gap: 20px;
+        background: rgba($white, 0.8);
+        padding: 8px;
+        border-radius: 50px;
+        box-shadow: 0 4px 20px rgba($primary, 0.1);
+        backdrop-filter: blur(10px);
+
+        .tab {
+            padding: 12px 32px;
+            border: none;
+            background: transparent;
+            color: $black;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+
+            &:hover {
+                color: $primary;
+            }
+
+            &.active {
+                background: linear-gradient(135deg, rgba($primary, 0.9) 0%, rgba($secondary, 0.8) 100%);
+                color: $white;
+                box-shadow: 0 4px 15px rgba($primary, 0.3);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .uae-assets-tabs {
+        padding: 30px 20px 15px;
+
+        .tabs-container {
+            gap: 10px;
+            padding: 6px;
+
+            .tab {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+

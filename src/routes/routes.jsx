@@ -3,6 +3,9 @@ import Thankyou from "../Components/ThankYouPage/Thankyou.jsx";
 import UnAuthorized from "../Components/UnAuthorized/UnAuthorixed.jsx";
 import AboutUsPage from "../Pages/AboutUsPage.jsx";
 import AssetsPage from "../Pages/AssetsPage.jsx";
+import UAEAssetsPage from "../Pages/UAEAssetsPage.jsx";
+import KSAAssetsPage from "../Pages/KSAAssetsPage.jsx";
+import CaseStudyDetailPage from "../Pages/CaseStudyDetailPage.jsx";
 import BlogPage from "../Pages/BlogPage.jsx";
 import ContactUspage from "../Pages/ContactUspage.jsx";
 import HomePage from "../Pages/HomePage.jsx";
@@ -16,6 +19,21 @@ const routes = [
   {
     path: "/assets",
     element: <AssetsPage/>,
+    isProtected: false,
+  },
+  {
+    path: "/uae-assets",
+    element: <UAEAssetsPage/>,
+    isProtected: false,
+  },
+  {
+    path: "/ksa-assets",
+    element: <KSAAssetsPage/>,
+    isProtected: false,
+  },
+  {
+    path: "/case-study/:slug",
+    element: <CaseStudyDetailPage/>,
     isProtected: false,
   },
   {

@@ -105,100 +105,79 @@
 
     .clients-container {
         width: 100%;
-        // display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
         position: relative;
         z-index: 2;
+        margin-top: 50px;
 
-        .splide__track {
-            padding: 40px 0 60px 0;
-        }
-          
-        .splide__slide {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            justify-items: center;
             align-items: center;
-            padding: 20px;
-            background: $white;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 1px solid rgba($primary, 0.1);
-            position: relative;
-            overflow: hidden;
 
-            // Add subtle gradient overlay
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
+            .client-item {
+                height: 150px;
                 width: 100%;
-                height: 3px;
-                background: linear-gradient(90deg, $primary 0%, $secondary 100%);
-                z-index: 1;
-            }
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-            }
-        }
-
-        .img-div {
-            width: 100%;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                filter: grayscale(100%) opacity(0.7);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                background: rgba($white, 0.95);
+                backdrop-filter: blur(20px) saturate(180%);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
                 transition: all 0.3s ease;
+                border: 1px solid rgba($primary, 0.1);
+                position: relative;
+                overflow: hidden;
+
+                // Add subtle gradient overlay
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+                    z-index: 1;
+                }
+
+                &:hover {
+                    // transform: translateY(-5px);
+                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12),
+                                0 6px 15px rgba($primary, 0.15);
+                    // border-color: rgba($primary, 0.3);
+                }
+
+                .img-div {
+                    width: 100%;
+                    height: 75px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 2;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        filter: grayscale(100%) opacity(0.7);
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                &:hover .img-div img {
+                    filter: grayscale(0%) opacity(1);
+                    transform: scale(1.08);
+                }
             }
-
-            &:hover img {
-                filter: grayscale(0%) opacity(1);
-                transform: scale(1.05);
-            }
-        }
-         
-        .splide__pagination {
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .splide__pagination__page {
-            height: 12px;
-            width: 12px;
-            opacity: 0.3;
-            background: $primary;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            margin: 0 8px;
-
-            &:hover {
-                opacity: 0.7;
-                transform: scale(1.2);
-            }
-        }
-
-        .splide__pagination__page.is-active {
-            background: linear-gradient(135deg, $primary 0%, $secondary 100%);
-            opacity: 1;
-            transform: scale(1.3);
-        }
-          
-        .splide__arrow {
-            display: none;
         }
     }
 }
@@ -223,8 +202,17 @@
         }
 
         .clients-container {
-            .splide__track {
-                padding: 35px 0 55px 0;
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+
+                .client-item {
+                    padding: 12px;
+
+                    .img-div {
+                        height: 55px;
+                    }
+                }
             }
         }
     }
@@ -284,27 +272,19 @@
         }
 
         .clients-container {
-            .splide__track {
-                padding: 30px 0 50px 0;
-            }
+            margin-top: 40px;
 
-            .splide__slide {
-                padding: 15px;
-                border-radius: 12px;
-            }
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
 
-            .img-div {
-                height: 70px;
-            }
+                .client-item {
+                    padding: 15px;
 
-            .splide__pagination__page {
-                height: 10px;
-                width: 10px;
-                margin: 0 6px;
-            }
-
-            .splide__arrow {
-                display: none;
+                    .img-div {
+                        height: 50px;
+                    }
+                }
             }
         }
     }
@@ -356,23 +336,19 @@
         }
 
         .clients-container {
-            .splide__track {
-                padding: 25px 0 45px 0;
-            }
+            margin-top: 35px;
 
-            .splide__slide {
-                padding: 12px;
-                border-radius: 10px;
-            }
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
 
-            .img-div {
-                height: 60px;
-            }
+                .client-item {
+                    padding: 12px;
 
-            .splide__pagination__page {
-                height: 8px;
-                width: 8px;
-                margin: 0 5px;
+                    .img-div {
+                        height: 45px;
+                    }
+                }
             }
         }
     }

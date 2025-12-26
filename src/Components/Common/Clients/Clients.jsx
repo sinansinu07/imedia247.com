@@ -1,6 +1,4 @@
 import "./Clients.scss"
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
 import { motion } from 'framer-motion';
 
 import client1 from "../../../Assets/Clients/client1.png"
@@ -105,43 +103,15 @@ export default function Clients() {
                     <motion.p variants={textVariants1} initial="initial" whileInView="animate">We are proud to partner with leading brands across UAE & KSA, delivering exceptional OOH and digital advertising solutions that drive results.</motion.p>
                 </div>
                 <div className="clients-container">
-                    <Splide
-                        options={{
-                            perPage: 5,
-                            perMove: 1,
-                            gap: "20px",
-                            autoplay: true,
-                            speed: 1000,
-                            rewind: true,
-                            rewindByDrag: true,
-                            breakpoints: {
-                                1024: {
-                                    perPage: 4,
-                                    gap: "15px",
-                                },
-                                768: {
-                                    perPage: 3,
-                                    gap: "15px",
-                                },
-                                480: {
-                                    perPage: 2,
-                                    gap: "12px",
-                                },
-                                320: {
-                                    perPage: 1,
-                                    gap: "10px",
-                                },
-                            },
-                        }}
-                    >
+                    <div className="clients-grid">
                         {testimonials.map((item) => (
-                            <SplideSlide key={item.id}>
+                            <div key={item.id} className="client-item">
                                 <div className="img-div">
-                                    <img src={item.image} alt="" />
+                                    <img src={item.image} alt={`Client ${item.id}`} />
                                 </div>
-                            </SplideSlide>
+                            </div>
                         ))}
-                    </Splide>
+                    </div>
                 </div>
             </div>
         </section>

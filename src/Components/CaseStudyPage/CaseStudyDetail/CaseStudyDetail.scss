@@ -1,0 +1,467 @@
+@import "../../../index.scss";
+
+.case-study-detail-page {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(248, 245, 240, 0.95) 0%, rgba(252, 250, 245, 0.98) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(0, 0, 0, 0.7) 100%
+            );
+        }
+    }
+
+    .hero-info-tabs {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 60px;
+        margin-bottom: 0;
+        width: 100%;
+        // background: linear-gradient(
+        //     to top,
+        //     rgba(0, 0, 0, 0.8) 0%,
+        //     rgba(0, 0, 0, 0.6) 50%,
+        //     transparent 100%
+        // );
+        // backdrop-filter: blur(10px);
+
+        .info-tab {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba($white, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba($white, 0.2);
+            transition: all 0.3s ease;
+            min-width: 250px;
+
+            &:hover {
+                background: rgba($white, 0.25);
+                transform: translateY(-5px);
+            }
+
+            .tab-label {
+                font-size: 13px;
+                font-weight: 600;
+                color: rgba($white, 0.8);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .tab-value {
+                font-size: 18px;
+                font-weight: 700;
+                color: $white;
+            }
+        }
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 180px;
+        left: 47%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        letter-spacing: 1px;
+        z-index: 3;
+    
+        .mouse {
+          width: 30px;
+          height: 50px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          position: relative;
+    
+          .wheel {
+            width: 4px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 2s infinite;
+          }
+        }
+      }
+}
+
+.content-section {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, rgba(248, 245, 240, 0.95) 0%, rgba(252, 250, 245, 0.98) 50%, rgba(255, 255, 255, 1) 100%);
+
+    .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .company-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 40px;
+        padding: 40px;
+        background: rgba($white, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba($primary, 0.1);
+
+        .company-logo {
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba($primary, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid rgba($primary, 0.1);
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .company-details {
+            flex: 1;
+
+            .company-name {
+                font-size: 18px;
+                font-weight: 600;
+                color: $secondary;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .case-study-title {
+                font-size: 36px;
+                font-weight: 700;
+                color: $black;
+                line-height: 1.3;
+                margin: 0;
+            }
+        }
+    }
+
+    .description-section {
+        margin-bottom: 50px;
+        padding: 40px;
+        background: rgba($white, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba($primary, 0.1);
+
+        .description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: $black;
+            margin: 0;
+        }
+    }
+
+    .key-points-section {
+        margin-bottom: 50px;
+        padding: 40px;
+        background: rgba($white, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba($primary, 0.1);
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: $primary;
+            margin: 0 0 25px 0;
+        }
+
+        .key-points-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+
+            .key-point-item {
+                padding: 15px 20px;
+                background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($secondary, 0.05) 100%);
+                border-radius: 10px;
+                border-left: 4px solid $primary;
+                font-size: 16px;
+                font-weight: 600;
+                color: $black;
+            }
+        }
+    }
+
+    .sections-container {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .section-item {
+            padding: 40px;
+            background: rgba($white, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba($primary, 0.1);
+
+            .section-title {
+                font-size: 24px;
+                font-weight: 700;
+                color: $primary;
+                margin: 0 0 20px 0;
+            }
+
+            .section-description {
+                font-size: 18px;
+                line-height: 1.8;
+                color: $black;
+                margin: 0;
+            }
+        }
+    }
+
+    .gallery-section {
+        padding: 40px;
+        background: rgba($white, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba($primary, 0.1);
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: $primary;
+            margin: 0 0 30px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            .gallery-item {
+                position: relative;
+                width: 100%;
+                padding-top: 75%; // 4:3 aspect ratio
+                overflow: hidden;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba($black, 0.1);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba($black, 0.2);
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 80vh;
+        min-height: 500px;
+
+        .hero-info-tabs {
+            padding: 25px 30px;
+            gap: 15px;
+
+            .info-tab {
+                padding: 12px 20px;
+
+                .tab-label {
+                    font-size: 11px;
+                }
+
+                .tab-value {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .content-section {
+        padding: 60px 0;
+
+        .content-container {
+            padding: 0 30px;
+        }
+
+        .company-info {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .case-study-title {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+        min-height: 400px;
+
+        .back-button {
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+
+            .icon {
+                font-size: 18px;
+            }
+        }
+
+    .scroll-indicator {
+        bottom: 200px;
+
+        .scroll-icon-wrapper {
+            width: 45px;
+            height: 45px;
+
+            .scroll-icon {
+                font-size: 24px;
+            }
+        }
+
+        .scroll-text {
+            font-size: 12px;
+        }
+    }
+
+    .hero-info-tabs {
+        flex-direction: column;
+        padding: 30px 25px;
+        gap: 15px;
+
+        .info-tab {
+            padding: 20px 25px;
+            min-width: 100%;
+            width: 150px;
+
+                .tab-label {
+                    font-size: 12px;
+                }
+
+                .tab-value {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .content-section {
+        padding: 40px 0;
+
+        .content-container {
+            padding: 0 20px;
+        }
+
+        .company-info,
+        .description-section,
+        .key-points-section,
+        .sections-container .section-item,
+        .gallery-section {
+            padding: 25px;
+        }
+
+        .company-info {
+            .company-logo {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+            }
+
+            .case-study-title {
+                font-size: 24px;
+            }
+        }
+
+        .description-section .description {
+            font-size: 16px;
+        }
+
+        .key-points-section .key-points-list {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-section .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+
+            .gallery-item {
+                padding-top: 100%; // Square for mobile
+            }
+        }
+    }
+}
+

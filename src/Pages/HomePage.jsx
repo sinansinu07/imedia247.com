@@ -19,7 +19,7 @@ export default function HomePage() {
                 <HomeHero/>
                 <AboutCompany/>
                 <Services/>
-                <WhyChooseUs/>
+                {/* <WhyChooseUs/> */}
                 <Projects/>
                 <Testimonials/>
                 {/* <HomeGallery/> */}

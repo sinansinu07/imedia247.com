@@ -101,15 +101,22 @@ a:hover {
 }
 
 .btn-primary {
-  color: $white;
-  background: $primary;
+  // color: $white;
+  // background: $primary;
   border: 2px solid $primary;
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  color: $white;
+  // border: none;
 
   &:hover {
-    color: $primary;
-    background: $white;
+    // color: $primary;
+    // background: $white;
     transition: .5s;
-    border: 2px solid $primary;
+    // border: 2px solid $primary;
+    background: linear-gradient(135deg, $secondary 0%, $primary 100%);
+    // transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    
   }
 }
 
@@ -117,11 +124,28 @@ a:hover {
   color: $primary;
   background: $white;
   border: 2px solid $primary;
+  background: linear-gradient(135deg, $secondary 0%, $primary 100%);
+  color: $primary;
+  // border: none;
+
+  &:hover {
+    // color: $primary;
+    // background: $white;
+    border: 2px solid $primary;
+    transition: .5s;
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn-white {
+  color: $primary;
+  background: $white;
+  border: 2px solid $primary;
 
   &:hover {
     color: $primary;
     background: $white;
-    border: 2px solid $primary;
     transition: .5s;
   }
 }

@@ -68,3 +68,16 @@ export const services = [
         icon2: icon52
     },
 ];
+
+export const assets = [
+    {
+        id: 1,
+        title: "UAE Assets",
+        slug: "uae-assets",
+    },
+    {
+        id: 2,
+        title: "KSA Assets",
+        slug: "ksa-assets",
+    }
+];

@@ -174,7 +174,7 @@ export default function HomeHero() {
                 </a>
                 <a href="/">
                     <div 
-                        className="btn btn-secondary"
+                        className="btn btn-white"
                         onMouseEnter={() => setIsHovered2(true)}
                         onMouseLeave={() => setIsHovered2(false)}>
                         <FlipLinkBtn isHovered={isHovered2}>Get a Quote</FlipLinkBtn>

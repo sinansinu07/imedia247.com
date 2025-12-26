@@ -48,11 +48,11 @@ export default function Footer() {
                     <h1 className="head">Quick Links</h1>
                     <ul>
                         <li><a className={location.pathname==="/" ? "active" : ""} href="/">Home</a></li>
-                        <li><a className={location.pathname==="/about-us" ? "active" : ""} href="/">About Us</a></li>
-                        <li><a className={location.pathname==="/services" ? "active" : ""} href="/">Services</a></li>
-                        <li><a className={location.pathname==="/assets" ? "active" : ""} href="/assets">Our Assets</a></li>
-                        <li><a className={location.pathname==="/blogs" ? "active" : ""} href="/">Blogs</a></li>
-                        <li><a className={location.pathname==="/contact-us" ? "active" : ""} href="">Contact</a></li>
+                        <li><a className={location.pathname==="/about-us" ? "active" : ""} href="/about-us">About Us</a></li>
+                        <li><a className={location.pathname==="/uae-assets" ? "active" : ""} href="/uae-assets">UAE Assets</a></li>
+                        <li><a className={location.pathname==="/ksa-assets" ? "active" : ""} href="/ksa-assets">KSA Assets</a></li>
+                        <li><a className={location.pathname==="/blogs" ? "active" : ""} href="/blogs">Blogs</a></li>
+                        <li><a className={location.pathname==="/contact-us" ? "active" : ""} href="/contact-us">Contact</a></li>
                     </ul>
                 </div>
                 <div className="footer_col">
